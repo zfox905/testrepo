@@ -9,10 +9,14 @@ import { UserList } from "./user/UserList";
 import { UserCreate } from "./user/UserCreate";
 import { UserEdit } from "./user/UserEdit";
 import { UserShow } from "./user/UserShow";
-import { AdvertiseList } from "./advertise/AdvertiseList";
-import { AdvertiseCreate } from "./advertise/AdvertiseCreate";
-import { AdvertiseEdit } from "./advertise/AdvertiseEdit";
-import { AdvertiseShow } from "./advertise/AdvertiseShow";
+import { PostList } from "./post/PostList";
+import { PostCreate } from "./post/PostCreate";
+import { PostEdit } from "./post/PostEdit";
+import { PostShow } from "./post/PostShow";
+import { CommentList } from "./comment/CommentList";
+import { CommentCreate } from "./comment/CommentCreate";
+import { CommentEdit } from "./comment/CommentEdit";
+import { CommentShow } from "./comment/CommentShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -32,7 +36,7 @@ const App = (): React.ReactElement => {
   return (
     <div className="App">
       <Admin
-        title={"My service-1"}
+        title={"My service"}
         dataProvider={dataProvider}
         authProvider={jwtAuthProvider}
         theme={theme}
@@ -47,11 +51,18 @@ const App = (): React.ReactElement => {
           show={UserShow}
         />
         <Resource
-          name="Advertise"
-          list={AdvertiseList}
-          edit={AdvertiseEdit}
-          create={AdvertiseCreate}
-          show={AdvertiseShow}
+          name="Post"
+          list={PostList}
+          edit={PostEdit}
+          create={PostCreate}
+          show={PostShow}
+        />
+        <Resource
+          name="Comment"
+          list={CommentList}
+          edit={CommentEdit}
+          create={CommentCreate}
+          show={CommentShow}
         />
       </Admin>
     </div>
