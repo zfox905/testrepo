@@ -25,3 +25,6 @@ describe("Testing the jwtStrategyBase.validate()", () => {
     return expect(result).rejects.toThrowError(UnauthorizedException);
   });
 });
+owError(UnauthorizedException);
+  });
+});
