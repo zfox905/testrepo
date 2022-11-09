@@ -17,3 +17,10 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Advertise {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  sadrzaj   String?
+  updatedAt DateTime @updatedAt
+}
